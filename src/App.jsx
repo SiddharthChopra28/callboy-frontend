@@ -6,7 +6,7 @@ import CallingStage from "./components/CallingStage";
 import SummaryStage from "./components/SummaryStage";
 
 export default function App() {
-  const BASE_URL = "https://bc32-2401-4900-8845-a7b4-81eb-9b49-da1b-1a84.ngrok-free.app";
+  const BASE_URL = "https://talko.siddharth28.dpdns.org";
   const [stage, setStage] = useState(STAGES.FORM);
   const [form, setForm] = useState({ to_number: "", target_name: "", agent_persona: "", objective: "", constraints: "", opening_msg: "" });
   const [errors, setErrors] = useState({});
