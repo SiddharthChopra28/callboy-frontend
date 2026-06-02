@@ -8,7 +8,7 @@ import SummaryStage from "./components/SummaryStage";
 export default function App() {
   const BASE_URL = "https://talko.siddharth28.dpdns.org";
   const [stage, setStage] = useState(STAGES.FORM);
-  const [form, setForm] = useState({ to_number: "", target_name: "", agent_persona: "", objective: "", constraints: "", opening_msg: "" });
+  const [form, setForm] = useState({ to_number: "+91 9810706119", target_name: "", agent_persona: "", objective: "", constraints: "", opening_msg: "" });
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const [callId, setCallId] = useState(null);
@@ -234,7 +234,13 @@ export default function App() {
               <p style={{ margin: 0, fontSize: 14, color: "#4b5563" }}>We need to verify your phone number before placing calls.</p>
             </div>
 
-            <div className="panel" style={{ gap: 14 }}>
+            <div className="panel" style={{ gap: 14, borderColor: "#3b2f1a", background: "#12100a" }}>
+              <div style={{ display: "flex", gap: 10, alignItems: "flex-start", padding: "10px 12px", borderRadius: 8, background: "#1a140a", border: "1px solid #3b2f1a" }}>
+                <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#f59e0b", marginTop: 6, flexShrink: 0 }} />
+                <p style={{ margin: 0, fontSize: 13, color: "#fef3c7", lineHeight: 1.5 }}>
+                  For now, new number verification is halted due to Twilio free account restrictions. Please try with my number, i.e +91 9810706119. Or <a href="mailto:siddharth_c1@me.iitr.ac.in">contact me</a> to get your number verified to use it.
+                </p>
+              </div>
               <div>
                 <div className="field-label">Phone Number</div>
                 <input
